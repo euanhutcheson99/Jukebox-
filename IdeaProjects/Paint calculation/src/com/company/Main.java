@@ -1,15 +1,56 @@
 package com.company;
+import java.util.Hashtable;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
+     static void codeword() {
+
+        // No need to mention the
+        // Generic type twice
+        Hashtable<String, Integer> ht1= new Hashtable();
+
+        // Initialization of a Hashtable
+        // using Generics
 
 
-     public static int wallsmethod() {
+        // Inserting the Elements
+        // using put() method
+        ht1.put ("one",1);
+        ht1.put("two",2);
+        ht1.put("three",3);
 
-         Scanner myObj = new Scanner(System.in);
 
-         System.out.println("What is the width of all of the walls in the room added(in meters)?");
+        Scanner myCodeword = new Scanner(System.in);
+
+        System.out.println("What is your code word?");
+        String pass = myCodeword.next();
+         while (!Objects.equals(pass, "one" )){
+             System.exit(1);
+             break;}
+        while (Objects.equals(pass, "one" )){
+        if (Objects.equals(ht1.containsKey("one"),true)) {
+            //System.exit(1);
+            System.out.println("Welcome to the secret paint calculator");
+            break;
+        }
+
+
+
+
+    }}
+
+
+
+
+
+
+
+    static int wallsmethod() {
+
+        Scanner myObj = new Scanner(System.in);
+
+        System.out.println("What is the width of all of the walls in the room added(in meters)?");
 
         float width = myObj.nextFloat();
 
@@ -40,14 +81,14 @@ public class Main {
         switch (Introunded) {
             case 1:
                 System.out.println("Lucky you, you won't need much paint at all!");
-              break;
-            case 2,3,4:
-              System.out.println("Might need a fair bit of paint!");
-              break;
-            case 5,6,7:
+                break;
+            case 2, 3, 4:
+                System.out.println("Might need a fair bit of paint!");
+                break;
+            case 5, 6, 7:
                 System.out.println("Thats a lot of paint make sure you get a good deal");
                 break;
-            case 8,9,10:
+            case 8, 9, 10:
                 System.out.println("You are going to need a loan for all this paint!");
                 break;
             default:
@@ -56,53 +97,48 @@ public class Main {
 
         }
 
-return Introunded;
-     }
+        return Introunded;
+    }
 
-     static void cost(int numberofpaintcans){
+    static void cost(int numberofpaintcans) {
 
-         Scanner myCost = new Scanner(System.in);
+        Scanner myCost = new Scanner(System.in);
         System.out.println("Would you like to see the cost?");
 
         String decision = myCost.next();
 
-        String decision1= "yes";
-        String decision2= "no";
+        String decision1 = "yes";
+        String decision2 = "no";
 
-        while (Objects.equals(decision, decision1)) { System.out.print("What type of brand of paint do you have?(d for dulex, f for Farrow and ball)?");
+        while (Objects.equals(decision, decision1)) {
+            System.out.print("What type of brand of paint do you have?(d for dulex, f for Farrow and ball)?");
             String choice = myCost.next();
-            String outcome1= "d";
-            String outcome2= "f";
-            if (Objects.equals(choice, outcome1)){
-                double costdulex= numberofpaintcans*3;
-
-
-
+            String outcome1 = "d";
+            String outcome2 = "f";
+            if (Objects.equals(choice, outcome1)) {
+                double costdulex = numberofpaintcans * 3;
 
 
             }
-        break;}
-
-
-
+            break;
+        }
 
 
     }
 
 
-
     public static void main(String[] args) {
-         int numberofpaintcans;
-         numberofpaintcans=wallsmethod();
+        codeword();
+        int numberofpaintcans;
+        numberofpaintcans = wallsmethod();
 
         cost(numberofpaintcans);
 
 
-
-        }
-
     }
 
+
+}
 
 
 
