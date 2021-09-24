@@ -10,9 +10,9 @@ public static void main(String [] arg) {
     System.out.println("1." +u.UIalbum().get(0));
     System.out.println("2." +u.UIalbum().get(1));
     System.out.println("3." +u.UIalbum().get(2));
-    System.out.println("Genre:"+u.UIgenre().get(u.UIchoice1(myalbum)-1));
-    System.out.println("Year:"+ u.UIsongyear().get(u.UIchoice1(myalbum)-1));
-    System.out.println("Artist:"+u.UIartistname().get(u.UIchoice1(myalbum)-1));
+    //System.out.println("Genre:"+u.UIgenre().get(u.UIchoice1(myalbum)-1));
+    //System.out.println("Year:"+ u.UIsongyear().get(u.UIchoice1(myalbum)-1));
+    //System.out.println("Artist:"+u.UIartistname().get(u.UIchoice1(myalbum)-1));
 
     //if (myalbum == 1) {
       //      System.out.println("Which track would you like to listen to?(1-11)");

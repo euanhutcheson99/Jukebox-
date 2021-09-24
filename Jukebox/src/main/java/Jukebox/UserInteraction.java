@@ -8,7 +8,7 @@ public class UserInteraction {
         Scanner myMusic = new Scanner(System.in);
         int myalbum = myMusic.nextInt();
 
-        return myalbum}
+        return myalbum;}
 
     public List<String> UIalbum() {
    // Scanner myMusic = new Scanner(System.in);
